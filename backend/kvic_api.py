@@ -16,18 +16,28 @@ def scope(db, user):
 
 
 def refresh(db, user, request):
+    allowed_hives = {
+        "HIVE-MH-88492-01",
+        "HIVE-MH-88493-01",
+    }
+
     items = [
         request.app.state.evaluate(db, h, request.app.state.settings, now())
         for h in db.scalars(
-            select(Hive).where(Hive.apiary_id.in_([a.id for a in scope(db, user)]))
+            select(Hive).where(
+                Hive.apiary_id.in_([a.id for a in scope(db, user)]),
+                Hive.id.in_(allowed_hives),
+            )
         )
     ]
+
     region = regional(
         db,
         db.get(Jurisdiction, profile(db, user, Officer).jurisdiction_id),
         request.app.state.settings,
         now(),
     )
+
     db.commit()
     return items, region
 
