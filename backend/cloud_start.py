@@ -8,12 +8,13 @@ from fastapi.testclient import TestClient
 
 from .app import create_app
 from .config import Settings
-from .models import User, Batch
+from .models import User, Batch, Device
 from .seed import seed
 from .qr_demo import ensure_qr_demo, DEMO_BATCH_ID
 from .demo_accounts import install
 from .schemas import ExtractionIn
 from .batches import create_extraction
+from .security import hash_key
 
 
 DEMO_BATCHES = {
@@ -278,6 +279,20 @@ def ensure_workflow_demo(app):
 
     print("Synthetic workflow demos ready.")
 
+def ensure_demo_device_key(app):
+    demo_key = os.getenv("DEMO_DEVICE_KEY")
+    if not demo_key:
+        return
+
+    with app.state.sessions() as db:
+        device = db.get(Device, "DEV-MH-88492-01")
+        if device is None:
+            raise RuntimeError("Demo telemetry device is missing")
+
+        device.key_hash = hash_key(demo_key)
+        device.active = True
+        db.commit()
+
 
 def initialize():
     settings = Settings()
@@ -314,6 +329,7 @@ def initialize():
                     )
 
         # Make sure the four workflow demo batches exist.
+        ensure_demo_device_key(app)
         ensure_workflow_demo(app)
 
     app.state.engine.dispose()
