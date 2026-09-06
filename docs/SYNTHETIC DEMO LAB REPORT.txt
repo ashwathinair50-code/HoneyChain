@@ -1,0 +1,14 @@
+SYNTHETIC DEMO LAB REPORT
+This is not a real FSSAI, KVIC or accredited laboratory certificate.
+Registered laboratory: SYNTHETIC DEMO LAB 1
+Report reference: SYNTHETIC-DEMO-MANUAL-001
+Test timestamp: enter the synthetic test time in the laboratory form.
+Batch ID: enter the demonstration batch ID.
+Parameter: Moisture
+Value: 17.5
+Unit: %
+Method: Synthetic demonstration
+Laboratory-declared outcome: PASS under prototype demonstration policy.
+
+No physical honey was tested. This file only demonstrates authenticated
+laboratory evidence, server-side SHA-256 hashing and institutional review.

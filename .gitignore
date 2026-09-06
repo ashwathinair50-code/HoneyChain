@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+honeychain.db
+*.db-shm
+*.db-wal
+node_modules/
+.venv/
+venv/
+demo-credentials.json

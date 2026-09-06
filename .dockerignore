@@ -1,0 +1,9 @@
+**/.env
+**/.env.*
+**/*.db*
+**/__pycache__
+**/.venv
+**/demo-credentials.json
+**/demo-batches.json
+.git
+frontend/dist
