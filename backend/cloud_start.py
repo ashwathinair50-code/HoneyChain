@@ -280,19 +280,24 @@ def ensure_workflow_demo(app):
     print("Synthetic workflow demos ready.")
 
 def ensure_demo_device_key(app):
-    demo_key = os.getenv("DEMO_DEVICE_KEY")
-    if not demo_key:
-        return
+    demo_keys = {
+        "DEV-MH-88492-01": os.getenv("DEMO_DEVICE_KEY"),
+        "DEV-MH-88493-01": os.getenv("DEMO_DEVICE_KEY_2"),
+    }
 
     with app.state.sessions() as db:
-        device = db.get(Device, "DEV-MH-88492-01")
-        if device is None:
-            raise RuntimeError("Demo telemetry device is missing")
+        for device_id, demo_key in demo_keys.items():
+            if not demo_key:
+                continue
 
-        device.key_hash = hash_key(demo_key)
-        device.active = True
+            device = db.get(Device, device_id)
+            if device is None:
+                raise RuntimeError(f"Demo telemetry device is missing: {device_id}")
+
+            device.key_hash = hash_key(demo_key)
+            device.active = True
+
         db.commit()
-
 
 def initialize():
     settings = Settings()
