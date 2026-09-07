@@ -692,7 +692,7 @@
     <!-- SIH DEMO 1-CLICK ROLE SWITCHER -->
     <div class="demo-bar">
         <div class="wrap row spread">
-            <span id="demo-bar-title" data-i18n="demo_title"><b>SIH Internal Hackathon · BeeTrust AI:</b> Quick 1-Click Role Switcher</span>
+            <span id="demo-bar-title" data-i18n="demo_title"><b>SIH Internal Hackathon · BeeTrust :</b> Quick 1-Click Role Switcher</span>
             <div class="row" style="gap:6px;align-items:center">
                 <button type="button" class="btn-chip" id="demo-chip-bee" data-i18n="demo_bee">🐝 Beekeeper / Farmer</button>
                 <button type="button" class="btn-chip" id="demo-chip-kvic" data-i18n="demo_kvic">🏛️ KVIC Admin</button>
@@ -719,7 +719,7 @@
                 </div>
                 <button class="btn" id="nav-verify" data-i18n="nav_verify">Verify honey</button>
                 <button class="btn hidden" id="nav-dashboard" data-i18n="nav_workspace">My workspace</button>
-                <button class="btn" id="nav-ai-engine" data-i18n="nav_ai_engine">🧠 AI & Risk Engine</button>
+                <button class="btn" id="nav-ai-engine" data-i18n="nav_ai_engine">Risk Engine</button>
                 <button class="btn" id="nav-blockchain" data-i18n="nav_blockchain">⛓️ Blockchain Ledger</button>
                 <button class="btn" id="nav-login" data-i18n="nav_login">Institutional login ↗</button>
                 <button class="btn hidden" id="logout" data-i18n="nav_logout">Sign out</button>
@@ -807,11 +807,11 @@
                     </div>
                     <aside>
                         <div class="panel">
-                            <h3 data-i18n="ai_box_title">How AI Decision Support Works</h3>
+                            <h3 data-i18n="ai_box_title">How Decision Support Works</h3>
                             <p class="small muted" data-i18n="ai_box_inputs"><b>Inputs</b> · Real-time weight W<sub>t</sub>, brood temp T<sub>t</sub>, humidity H<sub>t</sub>, and 48-hr rolling moving average W̄<sub>48h</sub>.</p>
                             <p class="small muted" data-i18n="ai_box_rules"><b>Anomaly Rules</b> · Colony stress (T > 38°C for 30m), sudden absconding/swarming (ΔW > 1.8 kg), and sensor failure.</p>
                             <button type="button" class="btn sm mt" style="font-size:11px" onclick="$('ai-dialog').showModal()" data-i18n="ai_box_btn">
-                                🧠 Deep Dive into AI Architecture →
+                                🧠 Deep Dive into Architecture →
                             </button>
                         </div>
                         <div class="panel mt" id="queue-panel">
@@ -890,7 +890,7 @@
 
     <footer>
         <div class="wrap row spread">
-            <span>BeeTrust AI · HoneyChain · SIH 2026 Internal Hackathon Edition</span>
+            <span>BeeTrust · HoneyChain · SIH 2026 Internal Hackathon Edition</span>
             <span>Somaiya Vidyavihar University · Team Insite (SIH26_241) · PS 26021</span>
         </div>
     </footer>
@@ -950,10 +950,10 @@
         </div>
     </dialog>
 
-    <!-- AI & RISK ENGINE ARCHITECTURE EXPLAINER MODAL (SOLVES EVALUATOR FEEDBACK) -->
+    <!--  RISK ENGINE ARCHITECTURE EXPLAINER MODAL (SOLVES EVALUATOR FEEDBACK) -->
     <dialog id="ai-dialog" style="max-width:740px">
         <div class="dialog-head row spread">
-            <h2 style="margin:0" data-i18n="ai_modal_title">🧠 BeeTrust AI Decision Support & Risk Engine Architecture</h2>
+            <h2 style="margin:0" data-i18n="ai_modal_title">🧠 BeeTrust Decision Support & Risk Engine Architecture</h2>
             <button class="btn" data-close="ai-dialog" aria-label="Close">×</button>
         </div>
         <div class="dialog-body">
@@ -991,7 +991,7 @@
                 </div>
             </div>
 
-            <h3 class="mt" style="font-size:16px">3. Trust Score (96/100 or 100/100) Mathematical Derivation</h3>
+            <h3 class="mt" style="font-size:16px">3. Trust Score Mathematical Derivation</h3>
             <p class="small muted">Deterministic weighted score based on 5 verifiable evidence pillars:</p>
             
             <div style="background:#faf8f2;padding:14px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;display:flex;flex-direction:column;gap:8px">
@@ -1026,15 +1026,15 @@
         </div>
     </dialog>
 
-    <!-- BLOCKCHAIN LEDGER EXPLORER MODAL (SOLVES EVALUATOR FEEDBACK) -->
+    <!-- SHA-256 EXPLORER MODAL (SOLVES EVALUATOR FEEDBACK) -->
     <dialog id="blockchain-dialog" style="max-width:760px">
         <div class="dialog-head row spread">
-            <h2 style="margin:0" data-i18n="blockchain_title">⛓️ Cryptographic Blockchain & Immutability Flow</h2>
+            <h2 style="margin:0" data-i18n="blockchain_title">⛓️ Cryptographic Blockchain & Flow</h2>
             <button class="btn" data-close="blockchain-dialog" aria-label="Close">×</button>
         </div>
         <div class="dialog-body">
             <div class="notice" data-i18n="blockchain_notice">
-                <b>Block Creation & Immutability Flow:</b> Every approved honey batch generates a sequential, cryptographically linked block in our tamper-resistant ledger.
+                <b>Block Creation & Flow:</b> Every approved honey batch generates a sequential, cryptographically linked block in our tamper-resistant ledger.
             </div>
 
             <div class="row spread" style="margin-bottom:14px;align-items:center">
@@ -1082,8 +1082,8 @@
                 demo_pub: '🔍 Public Verifier',
                 nav_verify: 'Verify honey',
                 nav_workspace: 'My workspace',
-                nav_ai_engine: '🧠 AI & Risk Engine',
-                nav_blockchain: '⛓️ Blockchain Ledger',
+                nav_ai_engine: '🧠 Risk Engine',
+                nav_blockchain: '⛓️ SHA - 256',
                 nav_login: 'Institutional login ↗',
                 nav_logout: 'Sign out',
                 public_title: 'Verify Your Honey',
@@ -1100,10 +1100,10 @@
                 tab_batches: 'Batch traceability',
                 hives_attention: 'Hives requiring attention',
                 filter_all_apiaries: 'All apiaries',
-                ai_box_title: 'How AI Decision Support Works',
+                ai_box_title: 'How Decision Support Works',
                 ai_box_inputs: '<b>Inputs</b> · Real-time weight W<sub>t</sub>, brood temp T<sub>t</sub>, humidity H<sub>t</sub>, and 48-hr rolling moving average W̄<sub>48h</sub>.',
                 ai_box_rules: '<b>Anomaly Rules</b> · Colony stress (T > 38°C for 30m), sudden absconding/swarming (ΔW > 1.8 kg), and sensor failure.',
-                ai_box_btn: '🧠 Deep Dive into AI Architecture →',
+                ai_box_btn: '🧠 Deep Dive into Architecture →',
                 offline_queue_title: 'Offline Rural Sync Queue',
                 offline_queue_desc: '<b>Offline-First:</b> Saved encrypted on device with client operation IDs. Automatically syncs when mobile coverage returns.',
                 sync_btn: 'Sync pending records',
@@ -1120,11 +1120,11 @@
                 extract_type_lbl: 'Honey source / variety',
                 extract_save_btn: 'Save extraction',
                 lab_notice: 'Only the assigned laboratory can enter lab results.',
-                blockchain_title: '⛓️ Cryptographic Blockchain & Immutability Flow',
-                blockchain_notice: '<b>Block Creation & Immutability Flow:</b> Every approved honey batch generates a sequential, cryptographically linked block in our tamper-resistant ledger.',
+                blockchain_title: '⛓️ SHA-256 Flow',
+                blockchain_notice: '<b>Block Creation & Flow:</b> Every approved honey batch generates a sequential, cryptographically linked block in our tamper-resistant ledger.',
                 chain_status_lbl: 'Ledger Chain Status:',
                 audit_btn: '🔍 Run Real-Time Cryptographic Audit',
-                ai_modal_title: '🧠 BeeTrust AI Decision Support & Risk Engine Architecture',
+                ai_modal_title: '🧠 BeeTrust Decision Support & Risk Engine Architecture',
                 ai_modal_notice: '<b>SIH Evaluator Transparency:</b> Here is exactly what inputs are collected, how the model evaluates colony risks, and how the Trust Score is mathematically calculated.',
                 metric_apiaries: 'Active Apiaries',
                 metric_hives: 'IoT Hive Nodes',
@@ -1141,8 +1141,8 @@
                 passport_approval: 'Approval date',
                 passport_evidence: 'Evidence checklist',
                 passport_lab: 'Finalized laboratory evidence',
-                passport_chain_block: 'Blockchain Ledger Block',
-                passport_view_chain: '⛓️ View Blockchain Blocks & Immutability Flow',
+                passport_chain_block: ' Block',
+                passport_view_chain: '⛓️ SHA - 256 Flow',
                 passport_print: '🖨️ Print Passport'
             },
             hi: {
@@ -1153,7 +1153,7 @@
                 demo_pub: '🔍 उपभोक्ता (सत्यापन)',
                 nav_verify: 'शहद जांचें',
                 nav_workspace: 'मेरा कार्यक्षेत्र',
-                nav_ai_engine: '🧠 एआई निर्णय प्रणाली',
+                nav_ai_engine: '🧠 निर्णय प्रणाली',
                 nav_blockchain: '⛓️ ब्लॉकचेन लेज़र',
                 nav_login: 'संस्थागत लॉगिन ↗',
                 nav_logout: 'लॉग आउट',
@@ -1174,7 +1174,7 @@
                 ai_box_title: 'एआई निर्णय प्रणाली कैसे कार्य करती है',
                 ai_box_inputs: '<b>इनपुट</b> · वास्तविक वजन W<sub>t</sub>, तापमान T<sub>t</sub>, आर्द्रता H<sub>t</sub>, एवं 48-घंटे का रोलिंग औसत W̄<sub>48h</sub>।',
                 ai_box_rules: '<b>विसंगति नियम</b> · छत्ते का तनाव (T > 38°C लगातार 30 मिनट), अचानक पलायन (ΔW > 1.8 kg), एवं सेंसर त्रुटि।',
-                ai_box_btn: '🧠 एआई आर्किटेक्चर विस्तार से समझें →',
+                ai_box_btn: 'आर्किटेक्चर विस्तार से समझें →',
                 offline_queue_title: 'ग्रामीण ऑफलाइन सिंक कतार',
                 offline_queue_desc: '<b>ऑफलाइन-प्रथम:</b> नेटवर्क न होने पर भी डिवाइस में डेटा सुरक्षित रहता है। इंटरनेट कवरेज मिलते ही स्वतः सर्वर से सिंक हो जाता है।',
                 sync_btn: 'लंबित रिकॉर्ड सिंक करें',
@@ -1224,7 +1224,7 @@
                 demo_pub: '🔍 ग्राहक (पडताळणी)',
                 nav_verify: 'मध पडताळा',
                 nav_workspace: 'माझे कार्यक्षेत्र',
-                nav_ai_engine: '🧠 एआय निर्णय प्रणाली',
+                nav_ai_engine: 'निर्णय प्रणाली',
                 nav_blockchain: '⛓️ ब्लॉकचेन लेजर',
                 nav_login: 'संस्थात्मक लॉगिन ↗',
                 nav_logout: 'लॉग आउट',
@@ -1245,7 +1245,7 @@
                 ai_box_title: 'एआय निर्णय प्रणाली कशी कार्य करते',
                 ai_box_inputs: '<b>इनपुट</b> · प्रत्यक्ष वजन W<sub>t</sub>, तापमान T<sub>t</sub>, आर्द्रता H<sub>t</sub>, आणि ४८-तासांची सरासरी W̄<sub>48h</sub>.',
                 ai_box_rules: '<b>विसंगती नियम</b> · पोळ्यावरील ताण (T > 38°C सलग ३० मिनिटे), अचानक पोळे सोडणे (ΔW > 1.8 kg), आणि सेन्सर बिघाड.',
-                ai_box_btn: '🧠 एआय आर्किटेक्चर सविस्तर समजून घ्या →',
+                ai_box_btn: 'आर्किटेक्चर सविस्तर समजून घ्या →',
                 offline_queue_title: 'ग्रामीण ऑफलाइन सिंक रांग',
                 offline_queue_desc: '<b>ऑफलाइन-प्रथम:</b> नेटवर्क नसतानाही मोबाइलमध्ये डेटा सुरक्षित राहतो. नेटवर्क मिळताच आपोआप सर्व्हरशी सिंक होतो.',
                 sync_btn: 'प्रलंबित नोंदी सिंक करा',
